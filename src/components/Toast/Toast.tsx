@@ -37,7 +37,7 @@ export default defineComponent({
   },
   emits: ["update:modelValue"],
   setup(props, { emit, slots }) {
-    let timer: number | undefined = undefined;
+    let timer: any = undefined;
 
     const updateShow = (value: boolean) => emit("update:modelValue", value);
 

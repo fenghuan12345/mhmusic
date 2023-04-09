@@ -46,7 +46,7 @@
     /> -->
     <MConfirm v-model="dialogStatu3" />
 
-    <button @click="btnClick">dialog的哦</button>
+    <button @click="btnClick('')">dialog的哦</button>
     <button @click="btnClick('left')">左边出来</button>
     <button @click="btnClick('bottom')">底部出来</button>
     <button @click="btnClick('top')">顶部出来</button>
