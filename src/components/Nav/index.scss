@@ -1,0 +1,56 @@
+@import "@/assets/css/variable.scss";
+//--test ：为js操作此变量需要用到的KEY
+//red: 默认的css属性值
+@import "@/assets/css/common.scss";
+.top-nav {
+  display: flex;
+  padding: $all-box-padding;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  overflow: hidden;
+  @include cell_bgcolor("background_color");
+  transition: background-image 0.4s;
+  background: no-repeat center center / cover;
+
+  .top-left {
+    flex: 1;
+    font-size: 0.5rem;
+    .iconfont {
+      @include font_color("text-color");
+      font-size: 0.5rem;
+    }
+  }
+  .top-center {
+    // flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 0.43rem;
+    // padding: 0.1rem 0;
+    .nav-title {
+      color: #909399;
+      margin: 0 0.2rem;
+      @include font_color("text-color");
+    }
+    .active {
+      // color: red;
+      font-size: 0.48rem;
+      font-weight: 600;
+    }
+  }
+  .top-right {
+    flex: 1;
+    text-align: right;
+    font-size: 0.5rem;
+    .iconfont {
+      font-size: 0.5rem;
+      @include font_color("text-color");
+    }
+    .icon-sousuo {
+      font-size: 0.5rem;
+    }
+  }
+}

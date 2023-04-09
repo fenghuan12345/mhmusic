@@ -1,0 +1,55 @@
+@import "@/assets/css/common.scss";
+.comfirm {
+  @include background_color("secondary-bg");
+  &-title {
+    color: #010101;
+    font-weight: 550;
+    font-size: 0.4rem;
+    letter-spacing: 1px;
+    padding: 0.25rem 0.25rem 0 0.25rem;
+    @include font_color("text-color");
+  }
+  &-message {
+    font-size: 0.32rem;
+    padding-top: 0.1rem;
+    padding: 0.1rem 0.2rem 0.4rem 0.2rem;
+    * {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div:nth-child(2) {
+      border-left: 1px solid #c8c8c8;
+    }
+    &-cancle {
+      border-top: 1px solid #c8c8c8;
+
+      flex: 1;
+      align-items: center;
+      // border-right: 1px solid #c8c8c8;
+      padding: 0.25rem;
+      color: #367af6;
+      font-size: 0.42rem;
+      font-weight: 600;
+      &:hover {
+        background-color: #dddddd;
+      }
+    }
+    &-comfirm {
+      border-top: 1px solid #c8c8c8;
+      flex: 1;
+      align-items: center;
+      padding: 0.25rem;
+      color: #3b7df6;
+      font-size: 0.42rem;
+      &:hover {
+        // background-color: #dddddd;
+        @include background_color("comfirm-hover-bg");
+      }
+    }
+  }
+}
