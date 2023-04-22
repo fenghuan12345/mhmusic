@@ -24,7 +24,7 @@ import { MenuItem } from "./types";
 
 export default defineComponent({
   name: "MenuList",
-  props: {},
+  // props: {},
   setup() {
     const menuListData = reactive<MenuItem[]>([
       { id: 1, name: "每日推荐", icon: "icon-tubiao204" },

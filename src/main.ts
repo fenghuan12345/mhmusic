@@ -4,7 +4,6 @@ import router from "./router";
 import store from "./store";
 import "amfe-flexible";
 import swiper from "@/plugins/swiper";
-import vConsole from "@/utils/vsconsole";
 import directive from "@/directive/index";
 
 createApp(App)

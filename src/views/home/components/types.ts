@@ -17,15 +17,16 @@ interface RecomdSheetItem {
   canDislike?: boolean;
   copywriter?: string;
   highQuality?: boolean;
-  id: number;
-  name: string;
-  picUrl: string;
+  id?: number;
+  name?: string;
+  picUrl?: string;
   playCount?: number;
   trackCount?: number;
   trackNumberUpdateTime?: number;
   type?: number;
   updateTime?: number;
   createTime?: number;
+  // [propName]: any
 }
 
 interface ArtistItem {

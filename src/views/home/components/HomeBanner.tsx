@@ -9,7 +9,7 @@ export default defineComponent({
   components: {
     MSwiper,
   },
-  props: {},
+  // props: {},
   setup() {
     const swiperData = ref<SwiperDateOptions[]>([]);
 

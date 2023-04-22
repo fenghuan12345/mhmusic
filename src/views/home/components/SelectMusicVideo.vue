@@ -31,7 +31,7 @@ export default defineComponent({
     TitleLine,
     SongVideoCard,
   },
-  props: {},
+  // props: {},
   setup(props, { emit }) {
     const recomdmMvData = ref<RecomdMvItem[]>([]);
     onMounted(() => {

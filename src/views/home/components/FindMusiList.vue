@@ -30,7 +30,7 @@ export default defineComponent({
     SongSheetCard,
     LoadingCom,
   },
-  props: {},
+  // props: {},
   // emits: ["item-click"],
   setup() {
     const findSheetData = ref<RecomdSheetItem[]>([]);
