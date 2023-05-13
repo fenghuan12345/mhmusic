@@ -110,7 +110,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/test",
     name: "test",
-    component: () => import("../views/test.vue"),
+    component: () => import("../views/Test.vue"),
     meta: {
       title: "梦回云音乐-测试",
       index: 2,

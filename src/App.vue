@@ -3,13 +3,13 @@
   <div class="app-content">
     <router-view v-slot="{ Component }">
       <!-- vue3.0配置 keep-alive缓存-->
-      <transition :name="$route.meta.transitionName">
+      <transition :name="transitionName">
         <keep-alive>
-          <component :is="Component" v-if="$route.meta.keepAlive" />
+          <component :is="Component" v-if="keepAlive" />
         </keep-alive>
       </transition>
-      <transition :name="$route.meta.transitionName">
-        <component :is="Component" v-if="!$route.meta.keepAlive" />
+      <transition :name="transitionName">
+        <component :is="Component" v-if="!keepAlive" />
       </transition>
     </router-view>
   </div>
@@ -17,15 +17,7 @@
   <!-- </div> -->
 </template>
 <script lang="tsx">
-import {
-  computed,
-  defineComponent,
-  onMounted,
-  provide,
-  reactive,
-  ref,
-  watch,
-} from "vue";
+import { computed, defineComponent, onMounted, provide, ref } from "vue";
 import PlayController from "./components/PlayController/PlayController";
 
 import {
@@ -35,6 +27,7 @@ import {
 } from "@/utils/types";
 import { disabledScale } from "@/plugins/disablescal";
 import store from "./store";
+import { useRoute } from "vue-router";
 export default defineComponent({
   components: {
     PlayController,
@@ -54,6 +47,10 @@ export default defineComponent({
     },
   },
   setup() {
+    const { transitionName, keepAlive } = useRoute().meta as Record<
+      string,
+      any
+    >;
     onMounted(() => {
       disabledScale();
     });
@@ -92,6 +89,8 @@ export default defineComponent({
     return {
       boxStatus,
       modelBrn,
+      transitionName,
+      keepAlive,
     };
   },
 });

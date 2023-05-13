@@ -149,7 +149,7 @@ export default defineComponent({
         confirmButtonText: "我来了嗷",
         showCancelButton: false,
       })
-        .then((res) => {
+        .then(() => {
           console.log("点击了确定");
         })
         .catch(() => {
